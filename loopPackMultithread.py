@@ -35,7 +35,6 @@ threads = []
 
 #Start recursion
 def my_sum( numbers, target, count, partial=[] ):
-    #TRIPLE CHECK that if it's above target, we escape. Just for safety. 
     global sums, threads, lck
     
     #Stop early if we want to save processing time.
