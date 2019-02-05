@@ -28,7 +28,7 @@ sums = []
 
 #Start recursion
 def my_sum( numbers, target, count, partial=[] ):
-    #TRIPLE CHECK that if it's above target, we escape. Just for safety. 
+ 
     global sums
     if sum(partial) > target:
         return
