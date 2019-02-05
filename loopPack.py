@@ -1,7 +1,7 @@
 """
 Created on Mon Jan  7 18:56:38 2019
 Loop shipping container combination generator
-Created for Lisa Swyzen
+Created for Terracycle/Loop
 @author: Tim Swyzen
 @email: tswyoff42@gmail.com
 Please contact me for any questions via email.
