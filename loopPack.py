@@ -39,25 +39,25 @@ def my_sum( numbers, target, count, partial=[] ):
     count = count + 1
     
     #Just writing stuff to the file.
-    fout.write( "[ " )
+    outString = "[ " #Append to a string so we only have to i/o once
     for i in range( len( partial )  ):
         if partial[i] == 60.001:
-            fout.write( "Aluminum Bottle (60 in), " )
+            outString = outString + "Aluminum Bottle (60 in), "
         elif partial[i] == 86.003:
-            fout.write( "Small Tiffin (86 in), " )
+            outString = outString + "Small Tiffin (86 in), "
         elif partial[i] == 111.005:
-            fout.write( "Medium Tiffin (111 in), " )
+            outString = outString + "Medium Tiffin (111 in), "
         elif partial[i] == 182.007:
-            fout.write( "Large Tiffin (182 in), " )
+            outString = outString + "Large Tiffin (182 in), "
         elif partial[i] == 80.011:
-            fout.write( "Jar (80 in), " )
+            outString = outString + "Jar (80 in), "
         elif partial[i] == 67.013:
-            fout.write( "Vinegar and Oil (67 in ), " )
+            outString = outString + "Vinegar and Oil (67 in ), "
         elif partial[i] == 31.017:
-            fout.write( "Body Shop Tea Tree (31 in), " )
+            outString = outString + "Body Shop Tea Tree (31 in), "
         elif partial[i] == 171.002:
-            fout.write( "Clorox (171 in), " )
-    fout.write( " ] = %s\n" % round( sum(partial), 3 ) )
+            outString = outString + "Clorox (171 in), "
+    fout.write( "%s ] = %s\n" % outString, round( sum(partial), 3 ) )
         
     #Update our sums list so we don't have duplicates.
     sums = sums + [ round( sum(partial), 3 ) ]
